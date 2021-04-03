@@ -18,6 +18,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "javascript-time-ago": "^2.3.4",
     "sirv-cli": "^1.0.0"
   }
 }

@@ -17,6 +17,14 @@
     display: flex;
     flex-direction: row;
   }
+
+  .chat-input input[type=text] {
+    flex-grow: 1;
+  }
+
+  .chat-input button {
+    flex-grow: 0;
+  }
 </style>
 
 <form on:submit|preventDefault="{onSubmit}">

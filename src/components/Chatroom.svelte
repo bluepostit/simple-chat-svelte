@@ -13,8 +13,6 @@
     }
   }
 
-  $: console.log(messages)
-
   const createMessage = (text) => {
     return {
       content: text,
@@ -24,7 +22,7 @@
   }
 
   const handleSubmit = (e) => {
-    console.log(`Sent: "${e.detail}"`)
+    // console.log(`Sent: "${e.detail}"`)
     const message = createMessage(e.detail)
     messages = [...messages, message]
   }

@@ -1,15 +1,7 @@
 <script>
-  import { onDestroy } from 'svelte'
-  import dateFormatter from './date-formatter'
+  import { fuzzyDate } from '../actions'
 
   export let message
-  $: date = dateFormatter.format(message.date)
-
-  const interval = setInterval(() => {
-    date = dateFormatter.format(message.date)
-  }, 1000)
-
-  onDestroy(() => clearInterval(interval))
 </script>
 
 <style>
@@ -34,6 +26,6 @@
 {#if message}
   <div class="message">
     <div class="content">{message.content}</div>
-    <div class="date">{date}</div>
+    <div class="date" use:fuzzyDate={{date: message.date}}></div>
   </div>
 {/if}
